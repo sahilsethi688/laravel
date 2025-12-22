@@ -1,0 +1,41 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/test' , function () {
+    return view('test');
+});
+
+Route::get('about',function(){
+    return 'about us';
+
+});
+
+Route::prefix('details')->group(function(){
+    Route::get('students',function(){
+        return'this is a students';
+    })->name('students-details'); 
+    
+    route::get('teachers',function(){//----------------------------------->grouping
+        return'this is a teachers';
+    })->name('teachers-details');
+}); 
+
+route::get('students/{id}/{reg}',function($id,$reg){
+    return'student number'.$id. 'registration number'.$reg;//----------->parameter
+});
+
+route::fallback(function(){
+    return'this page is not found try again';//---------------->fallback
+});
+
+route::get('about-us',function(){
+    $name = 'tester';
+    $email = 'tester2gmail.com';
+    return view('aboutus')->with('name',$name)->with('email',$email);//---->first example route to view
+    return view('aboutus',compact('name','email'));//------>second example route to view
+    return view('aboutus',['name'=>$name,'email'=>$email]);//-------->third example we can send data route to view
+});
