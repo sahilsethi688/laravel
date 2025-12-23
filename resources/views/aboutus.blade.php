@@ -18,5 +18,8 @@ this is a second comment --this is a blade comment
              <h1>this is a number {{ $i }}</h1>
          @endif   
         @endfor
+        @include('subviews.Input',[
+            'myName'=>'this is my name'
+        ])
     </body>
 </html>
