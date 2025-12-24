@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\studentcontroller;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -39,9 +40,16 @@ use Illuminate\Support\Facades\Route;
 //     return view('aboutus',compact('name','email'));//------>second example route to view
 //     return view('aboutus',['name'=>$name,'email'=>$email]);//-------->third example we can send data route to view
 // });
-Route::get('/aboutus' , function () 
-    {
-        $name = 'tester';
-    $email = 'tester2gmail.com';
-    return view('aboutus')->with('name',$name)->with('email',$email);
-});
+// Route::get('/aboutus' , function () 
+//     {
+//         $name = 'tester';
+//     $email = 'tester2gmail.com';
+//     return view('aboutus')->with('name',$name)->with('email',$email);
+// });
+// route::controller(studentcontroller::class)->group(function(){
+// route::get('students','index');
+// route::get('aboutus/{id}/{name}','aboutus');
+// });
+
+
+route::get('aboutus/{id}/{name}',[studentcontroller::class,'aboutus']);
