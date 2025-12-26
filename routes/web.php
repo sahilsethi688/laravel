@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\studentcontroller;
+use App\Http\Controllers\TeachersController;
+use App\Models\teachers;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -52,4 +54,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 
-route::get('aboutus/{id}/{name}',[studentcontroller::class,'aboutus']);
+// route::get('aboutus/{id}/{name}',[studentcontroller::class,'aboutus']);
+
+
+// route::get('teachers',function() {
+// return teachers::all();
+// });
+
+route::get('teachers',[TeachersController::class,'index']);
+route::get('add-teacher',[TeachersController::class,'add']);
+route::get('show-teacher/{id}',[TeachersController::class,'show']);

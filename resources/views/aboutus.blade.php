@@ -15,7 +15,7 @@ this is a second comment --this is a blade comment
             <p>{{ $i }}</p> 
 
          @if ($i==5)
-             <h1>this is a number {{ $i }}</h1>  
+             <h1>this is a number {{ $i }}</h1>   
          @endif   
         @endfor
         @include('subviews.Input',[
