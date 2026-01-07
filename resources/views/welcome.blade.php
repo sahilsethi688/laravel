@@ -75,7 +75,7 @@
                                     >
                                         <path
                                             d="M7.70833 6.95834V2.79167H3.54167M2.5 8L7.5 3.00001"
-                                            stroke="currentColor"
+                                            stroke="current colour"
                                             stroke-linecap="square"
                                         />
                                     </svg>
@@ -102,7 +102,7 @@
                                     >
                                         <path
                                             d="M7.70833 6.95834V2.79167H3.54167M2.5 8L7.5 3.00001"
-                                            stroke="currentColor"
+                                            stroke="currentcolour"
                                             stroke-linecap="square"
                                         />
                                     </svg>
