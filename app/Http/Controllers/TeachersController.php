@@ -28,4 +28,20 @@ class TeachersController extends Controller
         $item=teachers::findorfail($id);
         return $item;
     }
+    public function update($id)
+    {
+        $item = teachers::findorfail($id);
+        $item->name='updated teacher';
+        $item->update();
+        
+        return'updated successfully';
+
+}
+public function delete($id)
+{
+    $item =teachers::findOrFail($id);
+    $item->delete();
+
+    return'kuuuli delete';
+}
 }

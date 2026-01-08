@@ -61,6 +61,8 @@ use Illuminate\Support\Facades\Route;
 // return teachers::all();
 // });
 
-// route::get('teachers',[TeachersController::class,'index']);
-// route::get('add-teacher',[TeachersController::class,'add']);
-// route::get('show-teacher/{id}',[TeachersController::class,'show']);
+route::get('teachers',[TeachersController::class,'index']);
+route::get('add-teacher',[TeachersController::class,'add']);
+route::get('show-teacher/{id}',[TeachersController::class,'show']);
+route::get('update-teacher/{id}',[TeachersController::class,'update']);
+route::get('delete-teacher/{id}',[TeachersController::class,'delete']);
