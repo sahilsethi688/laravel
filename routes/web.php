@@ -5,6 +5,11 @@ use App\Http\Controllers\TeachersController;
 use App\Models\teachers;
 use Illuminate\Support\Facades\Route;
 
+// Root route to avoid 404 on visiting `/`
+Route::get('/', function () {
+	return view('welcome');
+});
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
